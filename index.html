@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en" data-resolution="landscape">
+<html lang="es" data-resolution="square">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1920, height=1080" />
+    <meta name="viewport" content="width=1080, height=1080" />
     <script src="compositions/cuboid-carousel/assets/gsap-3.14.2.min.js"></script>
     <style>
       * {
@@ -13,10 +13,10 @@
       html,
       body {
         margin: 0;
-        width: 1920px;
+        width: 1080px;
         height: 1080px;
         overflow: hidden;
-        background: #0b0d13;
+        background: #0d293f;
       }
       #root {
         position: relative;
@@ -30,11 +30,11 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="6.666666666666667"
-      data-width="1920"
+      data-duration="11.5"
+      data-width="1080"
       data-height="1080"
     >
-      <!-- Escena 1: apertura con Cuboid Carousel (variables por defecto) -->
+      <!-- Escena 1: Cuboid Carousel con las tarjetas del puesto -->
       <div
         id="scene-1-cuboid-carousel"
         data-composition-id="cuboid-carousel"
@@ -42,13 +42,27 @@
         data-start="0"
         data-duration="6.666666666666667"
         data-track-index="1"
-        data-width="1920"
+        data-width="1080"
+        data-height="1080"
+        data-variable-values='{"cardsJson": "[{\"color\": \"#27aae1\", \"category\": \"Brito Marketing busca\", \"title\": \"Editor/a de video freelance\", \"pills\": [\"Freelance\", \"Video\"]}, {\"color\": \"#27aae1\", \"category\": \"Requisito\", \"title\": \"Premiere · DaVinci · After Effects\", \"pills\": [\"Edición\", \"Software\"]}, {\"color\": \"#27aae1\", \"category\": \"Requisito\", \"title\": \"Motion graphics\", \"pills\": [\"Animación\", \"Diseño\"]}, {\"color\": \"#27aae1\", \"category\": \"Brito Marketing\", \"title\": \"¡Estamos contratando!\", \"pills\": [\"Editor/a de video\", \"Freelance\"]}, {\"color\": \"#27aae1\", \"category\": \"Requisito\", \"title\": \"Conocimiento avanzado en IA\", \"pills\": [\"IA\", \"Flujos creativos\"]}, {\"color\": \"#27aae1\", \"category\": \"Requisito\", \"title\": \"Colorización profesional de video LOG\", \"pills\": [\"Color\", \"LOG\"]}, {\"color\": \"#27aae1\", \"category\": \"Postúlate\", \"title\": \"Envía tu portafolio\", \"pills\": [\"natalia@britomarketing.com\"]}, {\"color\": \"#27aae1\", \"category\": \"Buscamos talento\", \"title\": \"Únete a Brito Marketing\", \"pills\": [\"Freelance\"]}]", "heroCard": 4, "count": 8, "backdrop": "#0d293f", "bodyColor": "#1c4a6e", "heroScale": 1.35, "bottomColor": "#27aae1"}'
+      ></div>
+
+      <!-- Escena 2: cierre -->
+      <div
+        id="scene-2-cierre"
+        data-composition-id="cierre"
+        data-composition-src="compositions/cierre.html"
+        data-start="6.2"
+        data-duration="5.3"
+        data-track-index="2"
+        data-width="1080"
         data-height="1080"
       ></div>
     </div>
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
+      tl.set({}, {}, 11.5);
       window.__timelines["main"] = tl;
       tl.seek(0);
     </script>

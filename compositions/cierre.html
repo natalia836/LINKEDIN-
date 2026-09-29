@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1080" />
+    <script src="cuboid-carousel/assets/gsap-3.14.2.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #0d293f;
+        --blue: #27aae1;
+        --white: #f7f7f7;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Escena 2: cierre con logo y llamada a la acción */
+      #cierre-root {
+        position: relative;
+        width: 1080px;
+        height: 1080px;
+        background: var(--navy);
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+        color: var(--white);
+        text-align: center;
+        overflow: hidden;
+      }
+      #cierre-stripe {
+        position: absolute;
+        width: 1700px;
+        height: 150px;
+        left: -310px;
+        top: 465px;
+        background: var(--blue);
+        opacity: 0.12;
+        transform: rotate(45deg);
+      }
+      #cierre-content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #cierre-logo {
+        width: 230px;
+        height: 230px;
+        margin-bottom: 44px;
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 5px rgba(39, 170, 225, 0.55),
+          0 18px 50px rgba(0, 0, 0, 0.35);
+      }
+      #cierre-eyebrow {
+        color: var(--blue);
+        font-size: 34px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        margin-bottom: 14px;
+      }
+      #cierre-title {
+        font-size: 84px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1;
+        margin-bottom: 22px;
+      }
+      #cierre-pill {
+        display: inline-block;
+        border: 2px solid var(--blue);
+        color: var(--blue);
+        border-radius: 999px;
+        padding: 10px 30px;
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 58px;
+      }
+      #cierre-cta {
+        font-size: 34px;
+        font-weight: 400;
+        margin-bottom: 18px;
+      }
+      #cierre-email {
+        background: var(--blue);
+        color: var(--navy);
+        font-size: 44px;
+        font-weight: 800;
+        border-radius: 18px;
+        padding: 18px 40px;
+        letter-spacing: -0.01em;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="cierre-root"
+      data-composition-id="cierre"
+      data-start="0"
+      data-duration="5.3"
+      data-width="1080"
+      data-height="1080"
+    >
+      <div id="cierre-stripe"></div>
+      <div id="cierre-content">
+        <img id="cierre-logo" src="assets/brito-logo.png" alt="Brito Marketing" />
+        <p id="cierre-eyebrow">¡Estamos contratando!</p>
+        <h1 id="cierre-title">Editor/a de video</h1>
+        <span id="cierre-pill">Freelance</span>
+        <p id="cierre-cta">Envía tu portafolio a</p>
+        <p id="cierre-email">natalia@britomarketing.com</p>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#cierre-root", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 0);
+      tl.fromTo(
+        "#cierre-stripe",
+        { xPercent: -60 },
+        { xPercent: 0, duration: 1.2, ease: "power3.out" },
+        0,
+      );
+      tl.fromTo(
+        "#cierre-logo",
+        { scale: 0.6, rotation: -45, opacity: 0 },
+        { scale: 1, rotation: 0, opacity: 1, duration: 0.8, ease: "back.out(1.6)" },
+        0.15,
+      );
+      tl.fromTo(
+        ["#cierre-eyebrow", "#cierre-title", "#cierre-pill"],
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: "power3.out", stagger: 0.12 },
+        0.55,
+      );
+      tl.fromTo(
+        ["#cierre-cta", "#cierre-email"],
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: "power3.out", stagger: 0.15 },
+        1.1,
+      );
+      tl.fromTo(
+        "#cierre-email",
+        { scale: 1 },
+        { scale: 1.05, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 },
+        2.2,
+      );
+      tl.set({}, {}, 5.3);
+      window.__timelines["cierre"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

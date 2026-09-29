@@ -6,7 +6,7 @@
 >
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1920, height=1080" />
+    <meta name="viewport" content="width=1080, height=1080" />
     <title>cuboid-carousel</title>
     <script src="assets/gsap-3.14.2.min.js"></script>
     <script type="importmap">
@@ -32,7 +32,7 @@
       }
       #cc-root {
         position: relative;
-        width: 1920px;
+        width: 1080px;
         height: 1080px;
         background: #0b0d13;
         overflow: hidden;
@@ -49,7 +49,7 @@
       }
       #cc-canvas {
         display: block;
-        width: 1920px;
+        width: 1080px;
         height: 1080px;
       }
       #cc-fontload {
@@ -67,7 +67,7 @@
       data-composition-id="cuboid-carousel"
       data-start="0"
       data-duration="6.666666666666667"
-      data-width="1920"
+      data-width="1080"
       data-height="1080"
     >
       <div data-hf-id="hf-y4po" id="cc-bg" aria-hidden="true"></div>
@@ -91,7 +91,7 @@
       (function () {
         var c = document.createElement("canvas");
         c.id = "cc-canvas";
-        c.width = 1920;
+        c.width = 1080;
         c.height = 1080;
         document.getElementById("cc-stage").appendChild(c);
       })();
@@ -188,7 +188,7 @@
       const HALF_EXTENT = sweepHalf * HERO_SCALE;
 
       /* ---- viewport maths (ported from viewportHalfWidth) ---- */
-      const ASPECT = 1920 / 1080;
+      const ASPECT = 1080 / 1080; // square LinkedIn crop: same vertical framing
       const vFov = (FOV * Math.PI) / 180;
       const hFov = 2 * Math.atan(Math.tan(vFov / 2) * ASPECT);
       const VIEW_HALF = CAM_Z * Math.tan(hFov / 2);
@@ -300,7 +300,7 @@
       const canvas = document.getElementById("cc-canvas");
       const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
       renderer.setPixelRatio(1);
-      renderer.setSize(1920, 1080, false);
+      renderer.setSize(1080, 1080, false);
       renderer.shadowMap.enabled = true;
       renderer.shadowMap.type = THREE.PCFSoftShadowMap;
       renderer.outputColorSpace = THREE.SRGBColorSpace;
