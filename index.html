@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="compositions/cuboid-carousel/assets/gsap-3.14.2.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0b0d13;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="6.666666666666667"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- Escena 1: apertura con Cuboid Carousel (variables por defecto) -->
+      <div
+        id="scene-1-cuboid-carousel"
+        data-composition-id="cuboid-carousel"
+        data-composition-src="compositions/cuboid-carousel/cuboid-carousel.html"
+        data-start="0"
+        data-duration="6.666666666666667"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

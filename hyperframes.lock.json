@@ -1,0 +1,12 @@
+{
+  "compositions/cuboid-carousel/assets/addons/environments/RoomEnvironment.js": "f89d80912785b14e5e9979162e5ea8ed7e11ecf2bf51e5a8e845c535bff8ff59",
+  "compositions/cuboid-carousel/assets/addons/utils/BufferGeometryUtils.js": "38a81e5b0f5638687fbc1ff7e4e9a45d8ab8cd59b0a70a3b423bbb5ee326bf72",
+  "compositions/cuboid-carousel/assets/cuboid-motion.js": "84c56fef029f5b8cd0886f56fafd7152fcc4011f75f7c4bdd192961e1afb6577",
+  "compositions/cuboid-carousel/assets/gsap-3.14.2.min.js": "7b2c91e3bff9022bef50054413b365a945c93f87285dcf8bdfb92076c4c56304",
+  "compositions/cuboid-carousel/assets/GSAP-NOTICE.txt": "bd9160e95a8b1de40754454659793462743dc12a0bc1e314ab7e71741e3bc362",
+  "compositions/cuboid-carousel/assets/Three-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+  "compositions/cuboid-carousel/assets/three.core.min.js": "5881a55b70ae9082f2f8253138c9f484b024a1f6ab2cfadc87af4673481efa13",
+  "compositions/cuboid-carousel/assets/three.module.min.js": "1897d797c460a9c2d53468f5ccc92473182d81de7d186ac22ed24d36a9b3f3c7",
+  "compositions/cuboid-carousel/cuboid-carousel.html": "c80d388a0a5258a08812c6f6a846f4d5d65ee764b4c73963c25a6f1acee88d41",
+  "compositions/cuboid-carousel/SKILL.md": "01f82f43969ff0ab219017956b789da93a9adec991d4fa3ae675b503a2da6c04"
+}
